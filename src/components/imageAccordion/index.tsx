@@ -1,7 +1,10 @@
 import React from 'react';
 import {ReactImageAccordion} from 'react-image-accordion';
+import { useNavigate } from "react-router-dom";
+import './index.css';
 
 const ImageAccordion = () => {
+    const navigate = useNavigate();
     const accordionData = [
         {
             id: 1,
@@ -28,24 +31,39 @@ const ImageAccordion = () => {
             svg: "aa (3).svg",
         },
     ];
-    const AccordionWidth= "40rem";
-    const AccordionHeight= "30rem";
+    const AccordionWidth= "960px";
+    const AccordionHeight= "500px";
     const ContentSize = [
-        "0.5rem",
+        "0.3rem",
+        "0.6rem",
         "0.8rem",
-        "1rem",
-        "1.2rem",
-        "1.5rem"
-      ]
+        "1.0rem",
+        "1.3rem"
+      ];
+    const ShowButton = true;
+    const handleClick = (id: number) => {
+        console.log(id);
+        if (id === 1) {
+            navigate("/home");
+        }
+        else if (id === 2) {
+                navigate("/orbit");
+        }
+        else if (id === 3) {
+                navigate("/gallery");
+        }
+    }
 
     return (
+        
         <ReactImageAccordion
             accordionData={accordionData}
             AccordionWidth={AccordionWidth}
             AccordionHeight={AccordionHeight}
             ContentSize={ContentSize}
-            onClick={(id: 1) => console.log(id)}
-            ShowButton={true}
+            onClick={(object: {id: number, title: string}) => {handleClick(object.id)}}
+            //onClick={(id: number) => handleClick(id)}
+            ShowButton={ShowButton}
         />
     );
 }

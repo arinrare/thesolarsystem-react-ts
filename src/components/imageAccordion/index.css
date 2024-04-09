@@ -1,0 +1,17 @@
+@media (min-width: 780px) and (max-width: 950px) {
+    .wrapper {
+      max-width: 50rem !important;
+    }
+}
+
+@media (min-width: 570px) and (max-width: 779px) {
+    .wrapper {
+      max-width: 35rem !important;
+    }
+}
+
+@media  (max-width: 569px) {
+    .wrapper {
+        max-width: 25rem !important;
+      }
+}

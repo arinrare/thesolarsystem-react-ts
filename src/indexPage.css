@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Nasalization';
+    src: 	url('./fonts/Nasalization.eot?') format('embedded-opentype'), 
+    url('./fonts/Nasalization.ttf')  format('truetype'); /* IE9 Compat Modes */
+    src: 	url('./fonts/Nasalization.woff') format('woff'), /* Modern Browsers */
+    url('./fonts/Nasalization.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('./fonts/Nasalization.svg#svgFontName') format('svg'); /* Legacy iOS */
+  }
+  
+  .indexTitle {
+    color: #BEC5D6;
+    font-family: Nasalization, "Lucida Grande", sans-serif;
+    text-shadow: 2px 3px 3px #127E7A;
+    font-size: 350%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  @media (max-width: 480px) {
+    .indexTitle {
+      font-size: 200%;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    .indexTitle {
+      font-size: 250%;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .indexTitle {
+      font-size: 300%;
+    }
+  }
+
+  @media (min-width: 1025px) and (max-width: 1200px) {
+    .indexTitle {
+      font-size: 325%;
+    }
+  }
+  
+  @media (min-width: 1201px) {
+    .indexTitle {
+      font-size: 350%;
+    }
+  }
