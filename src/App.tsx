@@ -1,21 +1,20 @@
 import React from 'react';
 import './App.css';
+import Home from './pages/home';
 import {Routes, Route, BrowserRouter} from "react-router-dom";
-import ImageAccordion from './components/imageAccordion';
-import Orbit from './components/orbit';
-import Gallery from './components/gallery';
-
-import './indexPage.css'
+import Orbit from './pages/orbit';
+import Gallery from './pages/gallery';
+import SolarSystem from './pages/solar_system';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="indexTitle">The Solar System</div>
-        <ImageAccordion />
         <Routes>
-            <Route path="/orbit" element={<Orbit />} />
-            <Route path="/gallery" element={<Gallery />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/solar_system" element={<SolarSystem />} />
+          <Route path="/orbit" element={<Orbit />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </BrowserRouter>
     </>
