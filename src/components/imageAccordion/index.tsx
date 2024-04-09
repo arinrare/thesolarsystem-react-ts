@@ -42,9 +42,8 @@ const ImageAccordion = () => {
       ];
     const ShowButton = true;
     const handleClick = (id: number) => {
-        console.log(id);
         if (id === 1) {
-            navigate("/home");
+            navigate("/solar_system");
         }
         else if (id === 2) {
                 navigate("/orbit");
