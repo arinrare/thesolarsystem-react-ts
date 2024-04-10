@@ -1,12 +1,10 @@
 import React from 'react';
 import './index.css';
-import Navmenu from '../../components/navmenu'
 
 const SolarSystem = () => {
     return (
         <div>
-            <h1>Interplanetary Distance Calculator</h1>
-            <Navmenu />
+            <h1>Solar System</h1>
         </div>
     );
 }
