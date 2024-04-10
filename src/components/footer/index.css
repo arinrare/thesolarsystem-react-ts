@@ -1,0 +1,60 @@
+.inline {
+    display: inline-block;
+}
+
+.footer {
+    position: relative;
+    width: calc(100vw);
+	height: 150px;
+	background-color: #222222;
+	margin-top: 20px;
+    vertical-align: bottom;
+}
+
+.mapHolder {
+	width: 200px;
+	vertical-align: top;
+    margin-left: 20px;
+}
+
+.footerText {
+    font-size: 14px;
+	font-family: 'Times New Roman', Times, serif;
+	color: #B2B2B2;
+}
+
+
+.mapHeading {
+	
+	text-decoration: underline;
+	padding: 2px;
+}
+
+.mapHome {
+	padding: 2px;
+	padding-left: 10px;
+}
+
+.mapHome:hover {
+	color: white;
+}
+
+.map {
+	padding: 2px;
+	padding-left: 20px;
+}
+
+.map:hover {
+	color: white;
+}
+
+.copyrightHolder {
+	width: calc(100vw - 237px);
+    vertical-align: bottom;
+}
+
+.nameHolder {
+	width: 100%;
+	text-align: right;
+    padding-right: 20px;
+}

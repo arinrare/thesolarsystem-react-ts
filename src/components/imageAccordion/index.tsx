@@ -8,7 +8,7 @@ const ImageAccordion = () => {
     const accordionData = [
         {
             id: 1,
-            title: "Interplanetary Distance Calculator",
+            title: "Distance Calculator",
             image: "/images/accordionSlider/solar_system.jpg",
             alt: "First slider panel",
             content: "Visit this page for a spin around the Solar System that will calculate your distances travelled as you go. Set your starting point and destination as you see fit!",
@@ -43,13 +43,11 @@ const ImageAccordion = () => {
     const ShowButton = true;
     const handleClick = (id: number) => {
         if (id === 1) {
-            navigate("/solar_system");
-        }
-        else if (id === 2) {
-                navigate("/orbit");
-        }
-        else if (id === 3) {
-                navigate("/gallery");
+          navigate("/solar_system");
+        } else if (id === 2) {
+          navigate("/orbit");
+        } else if (id === 3) {
+          navigate("/gallery");
         }
     }
 
