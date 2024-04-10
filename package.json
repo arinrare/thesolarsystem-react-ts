@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.93",
-    "@types/react": "^18.2.73",
+    "@types/react": "^18.2.75",
     "node-activex": "^3.4.1",
     "react": "^18.2.0",
     "react-image-accordion": "^1.2.2",

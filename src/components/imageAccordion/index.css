@@ -23,3 +23,8 @@
 .accordion-Link {
   cursor: pointer;
 }
+
+.accordion-icon {
+  fill: var(--_panel-color);
+  background: rgba(255, 255, 255, 0.5)    
+}
