@@ -1,0 +1,22 @@
+.navImage {
+	margin-left: 5px;
+	width: 30px;
+	height: 30px;
+}
+
+#navmenu {
+	position: absolute;
+	right: 3%;
+	top: 76px;
+	z-index:10;
+	vertical-align: top;
+}
+
+#selected {
+	opacity: 0.5;
+}
+
+.inline {
+	display: inline-block;
+	width: 40px;
+}
