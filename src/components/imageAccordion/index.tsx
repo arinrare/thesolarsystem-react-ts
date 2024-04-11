@@ -43,11 +43,14 @@ const ImageAccordion = () => {
     const ShowButton = true;
     const handleClick = (id: number) => {
         if (id === 1) {
-          navigate("/solar_system");
+            sessionStorage.setItem('currentPage', '1');
+            navigate("/solar_system");
         } else if (id === 2) {
-          navigate("/orbit");
+            sessionStorage.setItem('currentPage', '2');  
+            navigate("/orbit");
         } else if (id === 3) {
-          navigate("/gallery");
+            sessionStorage.setItem('currentPage', '3');
+            navigate("/gallery");
         }
     }
 
