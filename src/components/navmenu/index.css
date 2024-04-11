@@ -12,11 +12,14 @@
 	vertical-align: top;
 }
 
-#selected {
+.active {
 	opacity: 0.5;
 }
 
 .inline {
 	display: inline-block;
+}
+
+.navLink {
 	width: 40px;
 }
