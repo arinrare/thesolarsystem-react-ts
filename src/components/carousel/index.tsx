@@ -1,18 +1,50 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 import '../../plugins/carousel/cloud9.css'
 import '../../plugins/carousel/jquery.cloud9carousel.js';
 import '../../plugins/carousel/jquery.reflection.js';
+const $ = require('jquery');
 
 const Carousel = () => {
+
+    useEffect(() =>{
+        $('#distance').hide();
+        $('.fromto').hide();
+        let showcase = $("#showcase"), title = $('#item-title')
+
+        function rendered( carousel: { nearestItem: () => { (): any; new(): any; element: { (): any; new(): any; alt: any; }; }; floatIndex: () => number; } ) {
+            title.text( carousel.nearestItem().element.alt )
+
+            // Fade in based on proximity of the item
+            var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
+            title.css('opacity', 0.5 + (0.5 * c))
+        }
+        showcase.Cloud9Carousel({
+            yOrigin: 42,
+            yRadius: 48,
+            mirror: {
+                gap: 12,
+                height: 0.2
+            },
+            buttonLeft: $("#nav > .left"),
+            buttonRight: $("#nav > .right"),
+            autoPlay: 0,
+            bringToFront: true,
+            onRendered: rendered,
+            onLoaded: function() {
+                showcase.css( 'visibility', 'visible' )
+                //showcase.css( 'display', 'none' )
+                showcase.fadeIn( 1500 ) 
+            }    
+        });
+      },[])
        
     return (
 
         <div id="wrap">
             <div id = "header">
                 <div id = "solarsystemTitle">Interplanetary<br/>Distance Calculator</div>	
-            </div>
-            
+            </div>            
             <div id="showcase" className="noselect">
                 <img className = "cloud9-item" src = "/images/planets/sun_resized.png" alt = "The Sun" width = "260" height = "260" />
 

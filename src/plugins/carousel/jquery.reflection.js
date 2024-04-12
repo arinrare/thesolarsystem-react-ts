@@ -1,11 +1,5 @@
-/** BEGIN REFERENCE **/
-/*!
-	reflection.js for jQuery v1.12
-	(c) 2006-2013 Christophe Beyls <http://www.digitalia.be>
-	MIT-style license.
-*/
 
-;(function($) {
+(function($) {
 
 	$.fn.reflect = function(options) {
 		options = $.extend({
@@ -51,7 +45,6 @@
 						})[0];
 					}
 					$(reflection).css({display: "block", border: 0});
-
 					wrapper = $(/^a$/i.test(img.parentNode.tagName) ? "<span />" : "<div />").insertAfter(img).append([img, reflection])[0];
 					wrapper.className = img.className;
 					$(img).data("reflected", wrapper.style.cssText = img.style.cssText);
@@ -81,5 +74,3 @@
 	}
 
 })(window.jQuery || window.Zepto);
-
-/** END REFERENCE **/

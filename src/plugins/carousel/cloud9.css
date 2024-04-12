@@ -1,18 +1,3 @@
-/* ********************************************************************************************** */
-/* ********************************************************************************************** */
-/* BEGIN REFERENCE */
-/* 3D Cover Flow-Style Image Carousel Plugin with jQuery - Cloud 9 Carousel 2014, "jQuery script.net" Accessed 3 October 2014
-	http://www.jqueryscript.net/slider/3D-Cover-Flow-Style-Image-Carousel-Plugin-with-jQuery-Cloud-9-Carousel.html
-	Heavily modified for customisation - custom sections noted in comments */
-
-.noselect {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-
 /* Customised font, font color, position and size*/
 #solarsystemTitle {
   color: #BEC5D6;
@@ -36,10 +21,6 @@
   text-align: center;
   padding-bottom: 3px;
   margin: 26px auto;
-}
-
-#showcase {
-  visibility: hidden;
 }
 
 #showcase img {
@@ -101,12 +82,7 @@
 	position: relative; /* Needed for width adjustment */
 	left: 18px; /* Needed for width adjustment */
 	background: #1047A9;
-    background: -moz-linear-gradient(top, #1047A9 0%, #052A6E 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1047A9), color-stop(100%,#052A6E)); /* Chrome, Safari4+ */
-    background: -webkit-linear-gradient(top, #1047A9 0%, #052A6E 100%); /* Chrome10+, Safari5.1+ */
-    background: -o-linear-gradient(top, #1047A9 0%, #052A6E 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #1047A9 0%, #052A6E 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #1047A9 0%, #052A6E 100%); /* W3C */
+    background: linear-gradient(to bottom, #1047A9 0%, #052A6E 100%); 
     border: 2px solid #6B90D4;
 }
 
@@ -177,7 +153,3 @@
 	color: white;
 	font-family: 'Oswald', sans-serif;
 }
-
-/* END REFERENCE */
-/* ********************************************************************************************** */
-/* ********************************************************************************************** */
