@@ -347,6 +347,15 @@ module.exports = function (webpackEnv) {
           loader: require.resolve('source-map-loader'),
         },
         {
+          test: require.resolve("jquery"),
+          use: [{
+            loader: "expose-loader",
+            options: {
+              exposes: ["$", "jQuery"],
+            }
+          }],
+        },
+        {
           // "oneOf" will traverse all following loaders until one will
           // match the requirements. When no loader matches it will fall
           // back to the "file" loader at the end of the loader list.
@@ -563,6 +572,10 @@ module.exports = function (webpackEnv) {
       ].filter(Boolean),
     },
     plugins: [
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery"
+      }),
       // Generates an `index.html` file with the <script> injected.
       new HtmlWebpackPlugin(
         Object.assign(

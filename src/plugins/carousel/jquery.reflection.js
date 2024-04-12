@@ -7,7 +7,7 @@
 
 ;(function($) {
 
-	$.fn2.reflect = function(options) {
+	$.fn.reflect = function(options) {
 		options = $.extend({
 			height: 1/3,
 			opacity: 0.5

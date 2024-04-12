@@ -23,6 +23,8 @@
  *     http://plugins.jquery.com/mousewheel/
  */
 
+$ = require('jquery'); window.jQuery = $;  window.$ = $;
+
 (function($) {
   //
   // Detect CSS transform support
