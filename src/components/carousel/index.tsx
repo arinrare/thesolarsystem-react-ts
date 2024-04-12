@@ -13,7 +13,7 @@ const Carousel = () => {
         let showcase = $("#showcase"), title = $('#item-title')
 
         function rendered( carousel: { nearestItem: () => { (): any; new(): any; element: { (): any; new(): any; alt: any; }; }; floatIndex: () => number; } ) {
-            title.text( carousel.nearestItem().element.alt )
+            title.text( carousel.nearestItem().element.alt || " " )
 
             // Fade in based on proximity of the item
             var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
@@ -48,7 +48,7 @@ const Carousel = () => {
             <div id="showcase" className="noselect">
                 <img className = "cloud9-item" src = "/images/planets/sun_resized.png" alt = "The Sun" width = "260" height = "260" />
 
-                <img className = "cloud9-item" src = "/images/planets/blank.png" alt = "" width = "200" height = "200" />
+                <img className = "cloud9-item" src = "/images/planets/blank.png" alt = "&nbsp;" width = "200" height = "200" />
                 
                 <img className = "cloud9-item" src = "/images/planets/neptune_resized.png" alt = "Neptune" width = "200" height = "200" />
 

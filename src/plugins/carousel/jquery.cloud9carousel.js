@@ -23,7 +23,9 @@
  *     http://plugins.jquery.com/mousewheel/
  */
 
-$ = require('jquery'); window.jQuery = $;  window.$ = $;
+import * as $ from 'jquery';
+window.jQuery = $;
+window.$ = $; 
 
 (function($) {
   //
@@ -263,14 +265,14 @@ $ = require('jquery'); window.jQuery = $;  window.$ = $;
       
       var valueOf = $('#item-title').text();
       $('#from-title').text(valueOf);
-      if ($('#from-title').text() == "") {
+      if ($('#from-title').text() === "") {
       $('.fromto').hide();
       }
               
       this.play();
       
-      var distanceKM = new Array();
-      var distanceAU = new Array();
+      var distanceKM = [];
+      var distanceAU = [];
       for (let x = 0; x < 9; x++) {
       var kmID = "#km" + x;
       var auID = "#au" + x;
@@ -281,11 +283,11 @@ $ = require('jquery'); window.jQuery = $;  window.$ = $;
       }
       
       window.setTimeout( function() {
-        if ($('#item-title').text() == "") {
+        if ($('#item-title').text() === "") {
           $('.fromto').hide();
           $('#from-title').hide();
         }
-        else if ($('#from-title').text() == "") {
+        else if ($('#from-title').text() === "") {
           $('.fromto').hide();
         }
         else {
@@ -362,8 +364,8 @@ $ = require('jquery'); window.jQuery = $;  window.$ = $;
           break;
       }
       var calcDistance, fromDistance, toDistance;
-      var fromDistance = parseInt(distanceKM[from]);
-      var toDistance = parseInt(distanceKM[to]);
+      fromDistance = parseInt(distanceKM[from]);
+      toDistance = parseInt(distanceKM[to]);
       console.log(fromDistance + ' ' + toDistance);
       if (from <= to) {
         calcDistance = toDistance - fromDistance;
@@ -374,7 +376,7 @@ $ = require('jquery'); window.jQuery = $;  window.$ = $;
 
       console.log('Displaying distance: ' + calcDistance);
       
-      if (isNaN(calcDistance) == false) {
+      if (isNaN(calcDistance) === false) {
         
         $('#kilometres').text(calcDistance + " km");
         $('#kilometres').digits();
@@ -492,7 +494,7 @@ $ = require('jquery'); window.jQuery = $;  window.$ = $;
   //
   // The jQuery plugin
   //
-  $.fn.Cloud9Carousel = function( options ) {
+  $.fn.Cloud9Carousel = function( options) {
     return this.each( function() {
       /* For full list of options see the README */
       options = $.extend( {
