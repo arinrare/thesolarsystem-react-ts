@@ -10,6 +10,7 @@
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.93",
     "@types/react": "^18.2.75",
+    "jquery": "^3.7.1",
     "node-activex": "^3.4.1",
     "react": "^18.2.0",
     "react-image-accordion": "^1.2.2",
@@ -42,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.29"
   }
 }
