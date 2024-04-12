@@ -257,130 +257,133 @@ $ = require('jquery'); window.jQuery = $;  window.$ = $;
     // Spin the carousel.  Count is the number (+-) of carousel items to rotate
     //
     this.go = function( count ) {
-	  this.destRotation += (2 * Math.PI / this.items.length) * count;
-	  $('.fromto').hide();
-	  $('#from-title').hide();
-	  
-	  var valueOf = $('#item-title').text();
-	  $('#from-title').text(valueOf);
-	  if ($('#from-title').text() == "") {
-		 $('.fromto').hide();
-	  }
-	  	  	  
-	  this.play();
-	  
-	  var distanceKM = new Array();
-	  var distanceAU = new Array();
-	  for (let x = 0; x < 9; x++) {
-		var kmID = "#km" + x;
-		var auID = "#au" + x;
-		var value1 = $(kmID).text();
-		var value2 = $(auID).text();
-		distanceKM[x] = value1;
-		distanceAU[x] = value2;
-	  }
-	  
-	  window.setTimeout( function() {
-			if ($('#item-title').text() == "") {
-				$('.fromto').hide();
-				$('#from-title').hide();
-			}
-			else if ($('#from-title').text() == "") {
-				$('.fromto').hide();
-			}
-			else {
-				$('.fromto').show();
-				$('#from-title').show();
-			}
-			
-			var switchVal1 = $('#from-title').text();
-	  var switchVal2 = $('#item-title').text();
-	  var from;
-	  var to;
-		switch(switchVal1) {
-			case "The Sun":
-				from = 0;
-				break;
-			case "Mercury":
-				from = 1;
-				break;
-			case "Venus":
-				from = 2;
-				break;
-			case "Earth":
-				from = 3;
-				break;
-			case "Mars":
-				from = 4;
-				break;
-			case "Jupiter":
-				from = 5;
-				break;
-			case "Saturn":
-				from = 6;
-				break;
-			case "Uranus":
-				from = 7;
-				break;
-			case "Neptune":
-				from = 8;
-				break;
-			default: 
-				break;
-		}
-	  
-		switch(switchVal2) {
-			case "The Sun":
-				to = 0;
-				break;
-			case "Mercury":
-				to = 1;
-				break;
-			case "Venus":
-				to = 2;
-				break;
-			case "Earth":
-				to = 3;
-				break;
-			case "Mars":
-				to = 4;
-				break;
-			case "Jupiter":
-				to = 5;
-				break;
-			case "Saturn":
-				to = 6;
-				break;
-			case "Uranus":
-				to = 7;
-				break;
-			case "Neptune":
-				to = 8;
-				break;
-			default: 
-				break;
-		}
-	  
-		var calcDistance, fromDistance, toDistance;
-		var fromDistance = parseInt(distanceKM[from]);
-		var toDistance = parseInt(distanceKM[to]);
-		if (from <= to) {
-			calcDistance = toDistance - fromDistance;
-		}
-		else {
-			calcDistance = fromDistance - toDistance;
-		}
-		
-		if (isNaN(calcDistance) == false) {
-			
-			$('#kilometres').text(calcDistance + " km");
-			$('#kilometres').digits();
-			$('#distance').show(500);
-		}
-		else {
-			$('#distance').hide();
-		}
-	  
+      this.destRotation += (2 * Math.PI / this.items.length) * count;
+      $('.fromto').hide();
+      $('#from-title').hide();
+      
+      var valueOf = $('#item-title').text();
+      $('#from-title').text(valueOf);
+      if ($('#from-title').text() == "") {
+      $('.fromto').hide();
+      }
+              
+      this.play();
+      
+      var distanceKM = new Array();
+      var distanceAU = new Array();
+      for (let x = 0; x < 9; x++) {
+      var kmID = "#km" + x;
+      var auID = "#au" + x;
+      var value1 = $(kmID).text();
+      var value2 = $(auID).text();
+      distanceKM[x] = value1;
+      distanceAU[x] = value2;
+      }
+      
+      window.setTimeout( function() {
+        if ($('#item-title').text() == "") {
+          $('.fromto').hide();
+          $('#from-title').hide();
+        }
+        else if ($('#from-title').text() == "") {
+          $('.fromto').hide();
+        }
+        else {
+          $('.fromto').show();
+          $('#from-title').show();
+        }
+        
+      var switchVal1 = $('#from-title').text();
+      var switchVal2 = $('#item-title').text();
+      console.log('Switching from ' + switchVal1 + ' to ' + switchVal2);
+      var from;
+      var to;
+      switch(switchVal1) {
+        case "The Sun":
+          from = 0;
+          break;
+        case "Mercury":
+          from = 1;
+          break;
+        case "Venus":
+          from = 2;
+          break;
+        case "Earth":
+          from = 3;
+          break;
+        case "Mars":
+          from = 4;
+          break;
+        case "Jupiter":
+          from = 5;
+          break;
+        case "Saturn":
+          from = 6;
+          break;
+        case "Uranus":
+          from = 7;
+          break;
+        case "Neptune":
+          from = 8;
+          break;
+        default: 
+          break;
+      }
+      
+      switch(switchVal2) {
+        case "The Sun":
+          to = 0;
+          break;
+        case "Mercury":
+          to = 1;
+          break;
+        case "Venus":
+          to = 2;
+          break;
+        case "Earth":
+          to = 3;
+          break;
+        case "Mars":
+          to = 4;
+          break;
+        case "Jupiter":
+          to = 5;
+          break;
+        case "Saturn":
+          to = 6;
+          break;
+        case "Uranus":
+          to = 7;
+          break;
+        case "Neptune":
+          to = 8;
+          break;
+        default: 
+          break;
+      }
+      var calcDistance, fromDistance, toDistance;
+      var fromDistance = parseInt(distanceKM[from]);
+      var toDistance = parseInt(distanceKM[to]);
+      console.log(fromDistance + ' ' + toDistance);
+      if (from <= to) {
+        calcDistance = toDistance - fromDistance;
+      }
+      else {
+        calcDistance = fromDistance - toDistance;
+      }
+
+      console.log('Displaying distance: ' + calcDistance);
+      
+      if (isNaN(calcDistance) == false) {
+        
+        $('#kilometres').text(calcDistance + " km");
+        $('#kilometres').digits();
+        $('#distance').show(500);
+      }
+      else {
+        $('#distance').hide();
+      }
+      
 	  }, 1000);
 	  
 		

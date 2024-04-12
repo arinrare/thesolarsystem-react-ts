@@ -3,7 +3,7 @@
   color: #BEC5D6;
   font-family: Nasalization, "Lucida Grande", sans-serif;
   text-shadow: 2px 3px 3px #127E7A;
-  font-size: 250%;
+  font-size: 40px;
   text-align: center;
   padding: 20px;
 }
@@ -78,18 +78,19 @@
 /*Customised showcase size */
 #showcase {
 	height: 520px;
-	width: 940px !important; /*Originaw width 980px;*/
+	width: 940px !important; /*Original width 980px;*/
 	position: relative; /* Needed for width adjustment */
 	left: 18px; /* Needed for width adjustment */
 	background: #1047A9;
-    background: linear-gradient(to bottom, #1047A9 0%, #052A6E 100%); 
-    border: 2px solid #6B90D4;
+  background: linear-gradient(to bottom, #1047A9 0%, #052A6E 100%); 
+  border: 2px solid #6B90D4;
 }
+
 
 /* Customised button positioning */
 .left {
 	position: absolute;
-	left: -24px;
+	left: -28px;
 	top: 290px;
 	-webkit-border-radius: 10px 0px 0px 10px;
 	-moz-border-radius: 10px 0px 0px 10px;
@@ -104,6 +105,73 @@
 	-webkit-border-radius: 0px 10px 10px 0px;
 	-moz-border-radius: 0px 10px 10px 0px;
 	border-radius: 0px 10px 10px 0px;
+}
+
+/* Customised title for distance heading and value */
+.distance {
+	color: white;
+	font-family: 'Oswald', sans-serif;
+}
+
+@media (min-width: 780px) and (max-width: 1030px) {
+  #showcase {
+    transform: scale(0.8);
+  }
+  .right {
+    left: 865px;
+    top: 310px;
+  
+  }
+  .left {
+    left: 66px;
+    top: 310px;
+  }
+  .distance {
+    position: relative;
+    top: -50px;
+  }
+}
+
+@media (min-width: 661px) and (max-width: 890px) {
+  #showcase {
+    transform: scale(0.6);
+  }
+  .right {
+    left: 770px;
+    top: 330px;
+  }
+  .left {
+    left: 162px;
+    top: 330px;
+  }
+}
+
+@media  (min-width: 561px) and (max-width: 660px) {
+  #showcase {
+    transform: scale(0.5);
+  }
+  .right {
+    left: 723px;
+    top: 350px;
+  }
+  .left {
+    left: 209px;
+    top: 350px;
+  }
+}
+
+@media  (max-width:560px) {
+  #showcase {
+    transform: scale(0.4);
+  }
+  .right {
+    left: 675px;
+    top: 350px;
+  }
+  .left {
+    left: 256px;
+    top: 350px;
+  }
 }
 
 /* Customised from and to text styling */
@@ -122,13 +190,14 @@
 	left: 315px;
 	width: 350px;
 	text-align: center;
-	bottom: 50px;
+	bottom: 100px;
 }
 
 #footer {
   display: block;
   position: relative;
   top: -20px;
+  text-align: center; 
 }
 
 /* Custom styling for distance table */
@@ -148,8 +217,3 @@
 	font-size: 30px;
 }
 
-/* Customised title for distance heading and value */
-.distance {
-	color: white;
-	font-family: 'Oswald', sans-serif;
-}

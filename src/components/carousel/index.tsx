@@ -33,7 +33,7 @@ const Carousel = () => {
             onRendered: rendered,
             onLoaded: function() {
                 showcase.css( 'visibility', 'visible' )
-                //showcase.css( 'display', 'none' )
+                showcase.css( 'display', 'none' )
                 showcase.fadeIn( 1500 ) 
             }    
         });
@@ -76,6 +76,20 @@ const Carousel = () => {
                 <div id = "distance">
                     <div id = "distHeading" className = "inline distance">Distance Travelled:</div><div id = "kilometres" className = "inline distance"></div>
                 </div>
+            </div>
+            <footer id = "footer">
+				<div className = "fromto inline">From:&nbsp;</div><div className = "inline" id="from-title"></div><div className = "fromto inline">To:&nbsp;</div><p className = "inline" id="item-title"></p>
+			</footer>
+            <div id = "distanceTable">
+                <div id = "km0">0</div><div id = "au0">0</div>
+                <div id = "km1">57910000</div><div id = "au1">0.387</div>
+                <div id = "km2">108200000</div><div id = "au2">0.723</div>
+                <div id = "km3">149600000</div><div id = "au3">1.000</div>
+                <div id = "km4">227940000</div><div id = "au4">1.524</div>
+                <div id = "km5">778330000</div><div id = "au5">5.203</div>
+                <div id = "km6">1424600000</div><div id = "au6">9.523</div>
+                <div id = "km7">2873550000</div><div id = "au7">19.208</div>
+                <div id = "km8">4501000000</div><div id = "au8">30.087</div>
             </div>
             
             
