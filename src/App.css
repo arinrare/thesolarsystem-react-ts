@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', "Lucida Grande", sans-serif;
+  font-size: 14px;
+  color: #eee;
+  background-image: url('./images/stars.jpg');
+}
