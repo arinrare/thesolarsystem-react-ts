@@ -12,6 +12,7 @@ const Carousel = () => {
         let showcase = $("#showcase"), title = $('#item-title')
 
         function rendered( carousel: { nearestItem: () => { (): any; new(): any; element: { (): any; new(): any; alt: any; }; }; floatIndex: () => number; } ) {
+            console.log('running rendered');
             title.text( carousel.nearestItem().element.alt || " " )
 
             // Fade in based on proximity of the item
@@ -48,9 +49,9 @@ const Carousel = () => {
                 <div className="showcaseInnerWrapper">
                     <button className="left">←</button>  
                     <div id="showcase">
-                        <img className = "cloud9-item" src = "/images/planets/blank.png" alt = "&nbsp;" width = "200" height = "200" />
+                        <img className = "cloud9-item" src = "/images/planets/sun_resized.png" alt = "The Sun" width = "260" height = "260" /> 
 
-                        <img className = "cloud9-item" src = "/images/planets/sun_resized.png" alt = "The Sun" width = "260" height = "260" />                
+                        <img className = "cloud9-item" src = "/images/planets/blank.png" alt = "&nbsp;" width = "200" height = "200" />       
                         
                         <img className = "cloud9-item" src = "/images/planets/neptune_resized.png" alt = "Neptune" width = "200" height = "200" />
 
