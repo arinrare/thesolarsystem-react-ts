@@ -5,11 +5,12 @@
 }
 
 #navmenu {
-	position: absolute;
-	right: 3%;
-	top: 76px;
-	z-index:10;
 	vertical-align: top;
+	display: flex;
+	justify-content: right;
+	margin-right: 40px;
+	margin-top: 20px;
+	
 }
 
 .active {

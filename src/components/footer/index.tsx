@@ -6,7 +6,7 @@ const Footer = () => {
        
     return (
         <>
-            <div className = "footer">
+            <div className = "siteFooter">
 				<div className = "mapHolder inline">
 					<div className = "mapHeading">Sitemap</div>
 					<Link className = "mapHome footerText" to="/">Homepage</Link><br />

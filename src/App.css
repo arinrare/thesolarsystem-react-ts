@@ -38,11 +38,17 @@
 }
 
 body {
-  margin: 0;
   font-family: 'Open Sans', "Lucida Grande", sans-serif;
   font-size: 14px;
   color: #eee;
   background-image: url('./images/stars.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+html, body, #root {
+  width: 100vw;
+  min-height: 100%;
+  margin: 0px;
+  padding: 0px;
 }
