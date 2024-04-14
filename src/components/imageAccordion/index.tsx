@@ -62,7 +62,6 @@ const ImageAccordion = () => {
             AccordionHeight={AccordionHeight}
             ContentSize={ContentSize}
             onClick={(object: {id: number, title: string}) => {handleClick(object.id)}}
-            //onClick={(id: number) => handleClick(id)}
             ShowButton={ShowButton}
         />
     );

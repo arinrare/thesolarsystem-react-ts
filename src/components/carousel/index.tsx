@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './index.css';
 import '../../plugins/carousel/jquery.cloud9carousel.js';
 import '../../plugins/carousel/jquery.reflection.js';
@@ -12,12 +12,12 @@ const Carousel = () => {
         let showcase = $("#showcase"), title = $('#item-title')
 
         function rendered( carousel: { nearestItem: () => { (): any; new(): any; element: { (): any; new(): any; alt: any; }; }; floatIndex: () => number; } ) {
-            console.log('running rendered');
             title.text( carousel.nearestItem().element.alt || " " )
-
             // Fade in based on proximity of the item
             var c = Math.cos((carousel.floatIndex() % 1) * 2 * Math.PI)
             title.css('opacity', 0.5 + (0.5 * c))
+            $('.left').fadeIn(1000);
+            $('.right').fadeIn(1000);
         }
         showcase.Cloud9Carousel({
             yOrigin: 42,
