@@ -42,9 +42,6 @@ const Carousel = () => {
     return (
 
         <div id="wrap">
-            <div id = "header">
-                <div id = "solarsystemTitle">Interplanetary<br/>Distance Calculator</div>	
-            </div>
             <div className = "showcaseWrapper">
                 <div className="showcaseInnerWrapper">
                     <button className="left">←</button>  

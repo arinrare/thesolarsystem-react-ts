@@ -53,3 +53,15 @@ html, body, #root {
   margin: 0px;
   padding: 0px;
 }
+
+@font-face {
+  font-family: 'Nasalization';
+  src: 	url('./fonts/Nasalization.woff') format('woff'), /* Modern Browsers */
+  url('./fonts/Nasalization.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: 	url('./fonts/Oswald-Light.woff2') format('woff'), /* Modern Browsers */
+  url('./fonts/Oswald-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+}

@@ -8,6 +8,9 @@ const SolarSystem = () => {
     return (
         <div>
             <Navmenu />
+            <div id = "header">
+                <div id = "solarsystemTitle">Interplanetary<br/>Distance Calculator</div>	
+            </div>
             <Carousel />
             <Footer />
         </div>

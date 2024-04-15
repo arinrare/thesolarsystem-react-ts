@@ -18,6 +18,19 @@
     margin-bottom: 0px;
 }
 
+.accordion-title, .accordion-Link {
+	font-family: 'Nasalization';
+}
+
+.accordion-Link {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.accordion-content {
+	font-family: 'Oswald';
+}
+
 .container {
 	min-height: 100%;
 	position: relative;	
@@ -26,15 +39,6 @@
 .body {
 	padding-bottom: 80px;
 	min-height: 600px;
-}
-
-#solarsystemTitle {
-    color: #BEC5D6;
-    font-family: Nasalization, "Lucida Grande", sans-serif;
-    text-shadow: 2px 3px 3px #127E7A;
-    font-size: 40px;
-    text-align: center;
-    margin-top: 40px;
 }
 
 .showcaseWrapper {
@@ -136,7 +140,7 @@
   /* Customised titles font, color, size, shadow */
   #item-title, #from-title {
 	/*color: #F31414;*/
-	font-family: 'Times New Roman', Times, serif;
+	font-family: Nasalization, "Lucida Grande", sans-serif;
 	color: white;
 	font-size: 29px;
 	letter-spacing: 0.13em;
@@ -185,11 +189,41 @@
 	#showcase {
 	  	transform: scale(0.8);
 	}
+	.left {
+		left: 62px;
+		top: 140px;
+	}
+	.right {
+		right: 60px;
+		top: 140px;
+	}
+	.distance {
+		position: relative;
+		top: -55px;
+	}
+	#footer {
+		top: -85px;;
+	}
 }
   
 @media (min-width: 661px) and (max-width: 890px) {
 	#showcase {
 	  	transform: scale(0.6);
+	}
+	.left {
+		left: 156px;
+		top: 180px;
+	}
+	.right {
+		right: 153px;
+		top: 180px;
+	}
+	.distance {
+		position: relative;
+		top: -105px;
+	}	
+	#footer {
+		top: -135px;;
 	}
 }
   
@@ -197,9 +231,40 @@
 	#showcase {
 	  	transform: scale(0.5);
 	}
-}  
+	.left {
+		left: 203px;
+		top: 180px;
+	}
+	.right {
+		right: 201px;
+		top: 180px;
+	}
+	.distance {
+		position: relative;
+		top: -125px;
+	}	
+	#footer {
+		top: -155px;;
+	}
+}
+
 @media  (max-width:560px) {
 	#showcase {
 	  	transform: scale(0.4);
+	}
+	.left {
+		left: 250px;
+		top: 180px;
+	}
+	.right {
+		right: 250px;
+		top: 180px;
+	}
+	.distance {
+		position: relative;
+		top: -145px;
+	}
+	#footer {
+		top: -175px;;
 	}
 }
