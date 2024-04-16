@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
 import '../../plugins/carousel/jquery.cloud9carousel.js';
 import '../../plugins/carousel/jquery.reflection.js';

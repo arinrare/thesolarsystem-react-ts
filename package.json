@@ -48,6 +48,7 @@
     "react": "^18.2.0",
     "react-app-polyfill": "^3.0.0",
     "react-dev-utils": "^12.0.1",
+    "react-ga": "^3.3.1",
     "react-image-accordion": "^1.2.2",
     "react-refresh": "^0.11.0",
     "react-router-dom": "^6.22.3",
