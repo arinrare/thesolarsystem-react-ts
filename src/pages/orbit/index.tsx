@@ -13,7 +13,7 @@ const Orbit = () => {
     
     const [running, setRunning] = useState(false);
     const [show, setShow] = useState({show: false, class: "planetListHide"});
-    const [planetPanel, setPlanetPanel] = useState({show: false, sun: "planetListHide", mercury: "planetListHide", venus: "planetListHide", earth: "planetListHide", mars: "planetListHide", jupiter: "planetListHide", saturn: "planetListHide", uranus: "planetListHide", neptune: "planetListHide"});
+    const [planetPanel, setPlanetPanel] = useState({sun: "planetListHide", mercury: "planetListHide", venus: "planetListHide", earth: "planetListHide", mars: "planetListHide", jupiter: "planetListHide", saturn: "planetListHide", uranus: "planetListHide", neptune: "planetListHide"});
         
     function handlePlayClick() {
         setRunning(prevState => {
@@ -23,9 +23,8 @@ const Orbit = () => {
 
     function handleShowClick() {
         if (show) {
-            document.querySelectorAll('.panel').forEach(function(el) {
-                (el as HTMLElement).classList.remove("planetListShow");
-                (el as HTMLElement).classList.add("planetListHide");
+            setPlanetPanel(() => {
+                return {sun: "planetListHide", mercury: "planetListHide", venus: "planetListHide", earth: "planetListHide", mars: "planetListHide", jupiter: "planetListHide", saturn: "planetListHide", uranus: "planetListHide", neptune: "planetListHide"};
             });
         }
         
@@ -34,22 +33,17 @@ const Orbit = () => {
         });
     }
 
-    function handlePlanetClickCallback(planet: string) {    
-        setPlanetPanel(prevState => {
-            return {show: !prevState.show, sun: planet === "sun" ? "planetListShow" : "planetListHide", mercury: planet === "mercury" ? "planetListShow" : "planetListHide", venus: planet === "venus" ? "planetListShow" : "planetListHide", earth: planet === "earth" ? "planetListShow" : "planetListHide", mars: planet === "mars" ? "planetListShow" : "planetListHide", jupiter: planet === "jupiter" ? "planetListShow" : "planetListHide", saturn: planet === "saturn" ? "planetListShow" : "planetListHide", uranus: planet === "uranus" ? "planetListShow" : "planetListHide", neptune: planet === "neptune" ? "planetListShow" : "planetListHide"};
-        });
-    }
-
     function handlePlanetClick(planet: string) {
-        let count = 0;
-        document.querySelectorAll('.panel').forEach(function(el, index, array) {
-            count++;
-            (el as HTMLElement).classList.remove("planetListShow");
-            (el as HTMLElement).classList.add("planetListHide");
-            if (count === array.length) {
-                handlePlanetClickCallback(planet);
-            }           
-        });
+        const newState: any = planetPanel;
+        if (newState[planet] === "planetListShow") {
+            newState[planet] = "planetListHide";
+            setPlanetPanel((prevState) => ({ ...prevState, ...newState })); 
+        }               
+        else {
+            setPlanetPanel(() => {
+                return {sun: planet === "sun" ? "planetListShow" : "planetListHide", mercury: planet === "mercury" ? "planetListShow" : "planetListHide", venus: planet === "venus" ? "planetListShow" : "planetListHide", earth: planet === "earth" ? "planetListShow" : "planetListHide", mars: planet === "mars" ? "planetListShow" : "planetListHide", jupiter: planet === "jupiter" ? "planetListShow" : "planetListHide", saturn: planet === "saturn" ? "planetListShow" : "planetListHide", uranus: planet === "uranus" ? "planetListShow" : "planetListHide", neptune: planet === "neptune" ? "planetListShow" : "planetListHide"};
+            });
+        }      
     }
         
     return (
