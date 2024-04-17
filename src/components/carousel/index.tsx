@@ -41,7 +41,7 @@ const Carousel = () => {
        
     return (
 
-        <div id="wrap">
+        <div className="carouselWrapper">
             <div className = "showcaseWrapper">
                 <div className="showcaseInnerWrapper">
                     <button className="left">←</button>  

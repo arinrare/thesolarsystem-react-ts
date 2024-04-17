@@ -54,6 +54,19 @@ html, body, #root {
   padding: 0px;
 }
 
+.header {
+  margin-bottom: 50px;
+}
+
+.title {
+  color: #BEC5D6;
+  font-family: Nasalization, "Lucida Grande", sans-serif;
+  text-shadow: 2px 3px 3px #127E7A;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
 @font-face {
   font-family: 'Nasalization';
   src: 	url('./fonts/Nasalization.woff') format('woff'), /* Modern Browsers */

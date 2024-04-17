@@ -10,7 +10,7 @@ body {
     min-width: 1024px;
   }
   
-  #wrap {
+  .solarWrap {
     width: 980px; /* fixed width, centered in viewport */
     height: 600px;
     left: -490px;
@@ -18,7 +18,7 @@ body {
     position: relative;
   }
   
-  #wrap > h1 {
+  .solarWrap > h1 {
     font-size: 2.5em;
     text-align: center;
     padding-bottom: 3px;
@@ -30,12 +30,12 @@ body {
     position: relative;
   }
   
-  #orbitIntroContainer {
+  .orbitIntroContainer {
       width: 100%;
       margin-top: 100px;
   }
   
-  #orbitIntroduction {
+  .orbitIntroduction {
       text-align: left;
   }
   
@@ -60,35 +60,49 @@ body {
   /**************************************************************************/
   /** CSS for Solar Orbit **/
   
-  /*Styling for Title */
-  #orbitTitle {
-      width: 100%;
-      height: 70px;
-      text-align: center;
-      color: #BEC5D6;
-      font-family: Nasalization, "Lucida Grande",  sans-serif;
-      text-shadow: 2px 3px 3px #127E7A;
-      font-size: 250%;
-      padding-top: 20px;
+    
+.planetListHide {
+    display: none;
+}
+
+.planetListShow {
+    display: block; 
+    animation: fade-in 3s;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 100;
+    }
   }
-  
+
   /* Styling textual list of planets */
   .planetList {
-      display: none;
       position: absolute;
       top: 80px;
-      left: 30px;
+      left: 5px;
       background-color: rgba(69,119,212, 0.4);
-      padding: 5px;
-      padding-top: 15px;
+      padding: 25px 5px 5px 5px;
       height: 390px;
-      width: 125px;
+      width: 150px;
       border: 2px solid #6B90D4;
       z-index: 1;
   }
+
+  .planetListHide {
+      display: none;
+  }
+
+  .planetListShow {
+      display: block; 
+      animation: fade-in 1s;
+  } 
   
   /* Styling for pause button */
-  #pauseplay {
+  .pauseplay {
       position: absolute;
       top: 84px;
       left: 165px;
@@ -96,7 +110,7 @@ body {
   }
   
   /* Styling for reset button */
-  #reset {
+  .reset {
       position: absolute;
       top: 84px;
       left: 195px;
@@ -104,7 +118,7 @@ body {
   }
   
   /* Styling for hide/show icon */
-  #showIcon {
+  .showIcon {
       position: absolute;
       top: 84px;
       left: 127px;
@@ -124,7 +138,7 @@ body {
   }
   
   /* Styling for planet in textual planet list */
-  .planet {
+  .planetText {
       cursor: pointer;
   }
   
@@ -218,10 +232,9 @@ body {
   }
   
   .panel {
-      display: none;
       position: absolute;
       right: 0px;
-      top: 320px;
+      top: 80px;
       width: 180px;
       background-color: rgba(69,119,212, 0.4);
       border: 2px solid #6B90D4;
