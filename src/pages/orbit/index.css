@@ -31,7 +31,7 @@ position: relative;
 }
 
 .orbitIntroPanel {
-    width: 700px;
+    max-width: 700px;
     background-color: rgba(69,119,212, 0.4);
     border: 2px solid #6B90D4;
     font-size: 16px;
@@ -229,8 +229,9 @@ to {
     width: 180px;
     background-color: rgba(69,119,212, 0.4);
     border: 2px solid #6B90D4;
-    font-size: 14px;
+    font-size: 16px;
     padding: 5px;
+    font-family: 'Oswald', "Lucida Grande", sans-serif;
 }
 
 
@@ -586,4 +587,98 @@ animationPlay {
 @keyframes neptuneOrbit {
     from { transform: rotate(0deg) translateX(280px) rotate(0deg); }
     to   { transform: rotate(360deg) translateX(280px) rotate(-360deg); }
+}
+
+@media (min-width: 780px) and (max-width: 1030px) {
+	.solarWrap {
+	  	transform: scale(0.8);
+	}
+    .panel {
+        font-size: 20px;
+        width: 220px;
+        right: -20px;
+    }
+
+    .planeNumber {
+        font-size: 22px;
+    }
+    .planet {
+        font-size: 22px;
+    }
+    .planetList {
+        height: 500px;
+    }
+}
+  
+@media (min-width: 661px) and (max-width: 890px) {
+	.solarWrap {
+	  	transform: scale(0.6);
+	}
+    .orbitIntroPanel {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .panel {
+        font-size: 22px;
+        width: 220px;
+        right: -20px;
+    }
+    .planeNumber {
+        font-size: 24px;
+    }
+    .planet {
+        font-size: 24px;
+    }
+    .planetList {
+        height: 520px;
+    }
+}
+  
+@media  (min-width: 561px) and (max-width: 660px) {
+	.solarWrap {
+	  	transform: scale(0.5);
+	}
+    .orbitIntroPanel {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .panel {
+        font-size: 24px;
+        width: 220px;
+        right: -20px;
+    }
+    .planeNumber {
+        font-size: 27px;
+    }
+    .planet {
+        font-size: 27px;
+    }
+    .planetList {
+        height: 580px;
+    }
+}
+
+@media  (max-width:560px) {
+	.solarWrap {
+	  	transform: scale(0.4);
+	}
+    .orbitIntroPanel {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .panel {
+        font-size: 27px;
+        width: 220px;
+        right: -20px;
+    }
+    .planeNumber {
+        font-size: 27px;
+    }
+    .planet {
+        font-size: 27px;
+    }
+    .planetList {
+        height: 580px;
+    }
 }
