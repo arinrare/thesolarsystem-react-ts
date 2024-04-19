@@ -14,9 +14,10 @@ const Orbit = () => {
     const [show, setShow] = useState({show: false, class: 'planetListHide'});
     const [planetPanel, setPlanetPanel] = useState({currentState: '', sun: 'planetListHide', mercury: 'planetListHide', venus: 'planetListHide', earth: 'planetListHide', mars: 'planetListHide', jupiter: 'planetListHide', saturn: 'planetListHide', uranus: 'planetListHide', neptune: 'planetListHide'});
     const [playstate, setPlaystate] = useState('animationPause');
-   
+    const [planetMouseOver, setPlanetMouseOver] = useState({ currentState: '', sun: '', mercury: '', venus: '', earth: '', mars: '', jupiter: '', saturn: '', uranus: '', neptune: ''});
+
     function handlePlayClick() {
-        setPlaystate((prevState) => {         
+        setPlaystate((prevState) => {
             return prevState === 'animationPause' ? 'animationPlay' : 'animationPause';
         });
     }
@@ -63,7 +64,30 @@ const Orbit = () => {
         });
         setPlaystate('animationPause');    
     }
-        
+
+    function handlePlanetMouseover(planet: string) {
+        setPlanetMouseOver((prevState) => {
+            const newState: any = { ...prevState };
+            if (newState.currentState === '') {
+                newState.currentState = planet;
+                newState[planet] = 'planetHighlighted';
+            }
+            else {
+                newState.currentState = planet;
+                newState[planet] = 'planetHighlighted';
+            }
+            return { ...newState };
+        });
+    }
+
+    function handlePlanetMouseout(planet: string) {
+        setPlanetMouseOver((prevState) => {
+            const newState: any = { ...prevState };
+            newState[planet] = '';
+            return { ...newState };
+        });
+    }
+
     return (
         <>
             <Navmenu />
@@ -86,32 +110,31 @@ const Orbit = () => {
                 <img className = 'reset' src = {reset} onClick={handleResetClick} alt = 'Red Reset button' width = '25' height = '25' />
                 <img className = 'showIcon' src = {hideShow} onClick={handleShowClick} alt = 'Click Icon - indicates a hover action for the list of planets' width = '25' height = '25' />
                 <aside className = {'planetList ' + show.class}>
-                    <div className='sunText planetText' onClick={() => handlePlanetClick('sun')}>
-                        <div className='inline planetNumber'>1</div>
-                        <div className='inline planet'>The Sun</div>
+                    <div className='sunText planetText' onClick={() => handlePlanetClick('sun')}  onMouseOver={() => handlePlanetMouseover('sun')} onMouseOut={() => handlePlanetMouseout('sun')}>
+                        <div className='inline planetNumber'>1</div><div className='inline planet'>The Sun</div>
                     </div>
-                    <div className = 'mercuryText planetText' onClick={() => handlePlanetClick('mercury')}>
+                    <div className = 'mercuryText planetText' onClick={() => handlePlanetClick('mercury')} onMouseOver={() => handlePlanetMouseover('mercury')} onMouseOut={() => handlePlanetMouseout('mercury')}>
                         <div className = 'inline planetNumber'>2</div><div className = 'inline planet'>Mercury</div>
                     </div>
-                    <div className = 'venusText planetText' onClick={() => handlePlanetClick('venus')}>
+                    <div className = 'venusText planetText' onClick={() => handlePlanetClick('venus')} onMouseOver={() => handlePlanetMouseover('venus')} onMouseOut={() => handlePlanetMouseout('venus')}>
                         <div className = 'inline planetNumber'>3</div><div  className = 'inline planet'>Venus</div>
                     </div>
-                    <div className = 'earthText planetText' onClick={() => handlePlanetClick('earth')}>
+                    <div className = 'earthText planetText' onClick={() => handlePlanetClick('earth')} onMouseOver={() => handlePlanetMouseover('earth')} onMouseOut={() => handlePlanetMouseout('earth')}>
                         <div className = 'inline planetNumber'>4</div><div className = 'inline planet'>Earth</div>
                     </div>
-                    <div className = 'marsText planetText' onClick={() => handlePlanetClick('mars')}>
+                    <div className = 'marsText planetText' onClick={() => handlePlanetClick('mars')} onMouseOver={() => handlePlanetMouseover('mars')} onMouseOut={() => handlePlanetMouseout('mars')}>
                         <div className = 'inline planetNumber'>5</div><div className = 'inline planet'>Mars</div>
                     </div>
-                    <div className = 'jupiterText planetText' onClick={() => handlePlanetClick('jupiter')}>
+                    <div className = 'jupiterText planetText' onClick={() => handlePlanetClick('jupiter')} onMouseOver={() => handlePlanetMouseover('jupiter')} onMouseOut={() => handlePlanetMouseout('jupiter')}>
                         <div className = 'inline planetNumber'>6</div><div className = 'inline planet'>Jupiter</div>
                     </div>
-                    <div className = 'saturnText planetText' onClick={() => handlePlanetClick('saturn')}>
+                    <div className = 'saturnText planetText' onClick={() => handlePlanetClick('saturn')} onMouseOver={() => handlePlanetMouseover('saturn')} onMouseOut={() => handlePlanetMouseout('saturn')}>
                         <div className = 'inline planetNumber'>7</div><div className = 'inline planet'>Saturn </div>
                     </div>
-                    <div className = 'uranusText planetText' onClick={() => handlePlanetClick('uranus')}>
+                    <div className = 'uranusText planetText' onClick={() => handlePlanetClick('uranus')} onMouseOver={() => handlePlanetMouseover('uranus')} onMouseOut={() => handlePlanetMouseout('uranus')}>
                         <div className = 'inline planetNumber'>8</div><div className = 'inline planet'>Uranus</div>
                     </div>
-                    <div className = 'neptuneText planetText' onClick={() => handlePlanetClick('neptune')}>
+                    <div className = 'neptuneText planetText' onClick={() => handlePlanetClick('neptune')} onMouseOver={() => handlePlanetMouseover('neptune')} onMouseOut={() => handlePlanetMouseout('neptune')}>
                         <div className = 'inline planetNumber'>9</div><div className = 'inline planet'>Neptune</div>
                     </div>
                 </aside>
@@ -122,23 +145,23 @@ const Orbit = () => {
                 <span className='clickTooltip'>Click on a planet name!</span>
                 <img id = 'showIconPanel' src = {hideShow} alt = 'Click Icon - indicates a hover action for the list of planets' width = '25' height = '25' />
             
-                <img id = 'sun' className = {'sunCenter planetImg ' + playstate} src = '/images/planets/sun_resized.png' alt = 'The Sun - Stationary' width = '60' height = '60' />
+                <img id = 'sun' className = {'sunCenter planetImg ' + playstate + ' ' + planetMouseOver.sun} src = '/images/planets/sun_resized.png' alt = 'The Sun - Stationary' width = '60' height = '60' />
                 
-                <img id = 'earth' className = {'earthCenter planetImg ' + playstate}  src = '/images/planets/earth_resized.png' alt = 'The Earth - In orbit around the Sun' width = '15' height = '15' />
+                <img id = 'earth' className = {'earthCenter planetImg ' + playstate  + ' ' + planetMouseOver.earth}  src = '/images/planets/earth_resized.png' alt = 'The Earth - In orbit around the Sun' width = '15' height = '15' />
                 
-                <img id = 'mercury' className = {'mercuryCenter planetImg ' + playstate} src = '/images/planets/mercury_resized.png' alt = 'Mercury - In orbit around the Sun' width = '5' height = '5' />
+                <img id = 'mercury' className = {'mercuryCenter planetImg ' + playstate + ' ' + planetMouseOver.mercury} src = '/images/planets/mercury_resized.png' alt = 'Mercury - In orbit around the Sun' width = '5' height = '5' />
                 
-                <img id = 'venus' className = {'venusCenter planetImg ' + playstate}  src = '/images/planets/venus_resized.png' alt = 'Venus - In orbit around the Sun' width = '14' height = '14' />
+                <img id = 'venus' className = {'venusCenter planetImg ' + playstate  + ' ' + planetMouseOver.venus}  src = '/images/planets/venus_resized.png' alt = 'Venus - In orbit around the Sun' width = '14' height = '14' />
                 
-                <img id = 'mars' className = {'marsCenter planetImg ' + playstate} src = '/images/planets/mars_resized.png' alt = 'Mars - In orbit around the Sun' width = '8' height = '8' />
+                <img id = 'mars' className = {'marsCenter planetImg ' + playstate  + ' ' + planetMouseOver.mars} src = '/images/planets/mars_resized.png' alt = 'Mars - In orbit around the Sun' width = '8' height = '8' />
                 
-                <img id = 'jupiter' className = {'jupiterCenter planetImg ' + playstate} src = '/images/planets/jupiter_resized.png' alt = 'Jupiter - In orbit around the Sun' width = '28' height = '28' />
+                <img id = 'jupiter' className = {'jupiterCenter planetImg ' + playstate + ' ' + planetMouseOver.jupiter} src = '/images/planets/jupiter_resized.png' alt = 'Jupiter - In orbit around the Sun' width = '28' height = '28' />
                 
-                <img id = 'saturn' className = {'saturnCenter planetImg ' + playstate} src = '/images/planets/saturn_resized.png' alt = 'Saturn - In orbit around the Sun' width = '23' height = '23' />
+                <img id = 'saturn' className = {'saturnCenter planetImg ' + playstate + ' ' + planetMouseOver.saturn} src = '/images/planets/saturn_resized.png' alt = 'Saturn - In orbit around the Sun' width = '23' height = '23' />
                 
-                <img id = 'uranus' className = {'uranusCenter planetImg ' + playstate}  src = '/images/planets/uranus_resized.png' alt = 'Uranus - In orbit around the Sun' width = '18' height = '18' />
+                <img id = 'uranus' className = {'uranusCenter planetImg ' + playstate + ' ' + planetMouseOver.uranus}  src = '/images/planets/uranus_resized.png' alt = 'Uranus - In orbit around the Sun' width = '18' height = '18' />
                 
-                <img id = 'neptune' className = {'neptuneCenter planetImg ' + playstate} src = '/images/planets/neptune_resized.png' alt = 'Neptune - In orbit around the Sun' width = '16' height = '16' />
+                <img id = 'neptune' className = {'neptuneCenter planetImg ' + playstate + ' ' + planetMouseOver.neptune} src = '/images/planets/neptune_resized.png' alt = 'Neptune - In orbit around the Sun' width = '16' height = '16' />
             
                 <section className = 'contentPanel'>
                     
