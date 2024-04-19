@@ -592,6 +592,7 @@ animationPlay {
 @media (min-width: 780px) and (max-width: 1030px) {
 	.solarWrap {
 	  	transform: scale(0.8);
+          top: -40px
 	}
     .panel {
         font-size: 20px;
@@ -613,6 +614,7 @@ animationPlay {
 @media (min-width: 661px) and (max-width: 890px) {
 	.solarWrap {
 	  	transform: scale(0.6);
+          top: -60px
 	}
     .orbitIntroPanel {
         margin-left: 50px;
@@ -638,6 +640,7 @@ animationPlay {
 @media  (min-width: 561px) and (max-width: 660px) {
 	.solarWrap {
 	  	transform: scale(0.5);
+          top: -80px
 	}
     .orbitIntroPanel {
         margin-left: 50px;
@@ -662,6 +665,7 @@ animationPlay {
 @media  (max-width:560px) {
 	.solarWrap {
 	  	transform: scale(0.4);
+        top: -100px;
 	}
     .orbitIntroPanel {
         margin-left: 50px;
