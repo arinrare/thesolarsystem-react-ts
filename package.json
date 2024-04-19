@@ -2,6 +2,7 @@
   "name": "thesolarsystem",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://michaelbaggott.site/portfolio/dig252-react-ts",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",

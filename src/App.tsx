@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio/dig252-react-ts">
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/solar_system' element={<SolarSystem />} />

@@ -145,23 +145,23 @@ const Orbit = () => {
                 <span className='clickTooltip'>Click on a planet name!</span>
                 <img id = 'showIconPanel' src = {hideShow} alt = 'Click Icon - indicates a hover action for the list of planets' width = '25' height = '25' />
             
-                <img id = 'sun' className = {'sunCenter planetImg ' + playstate + ' ' + planetMouseOver.sun} src = '/images/planets/sun_resized.png' alt = 'The Sun - Stationary' width = '60' height = '60' />
+                <img id = 'sun' className = {'sunCenter planetImg ' + playstate + ' ' + planetMouseOver.sun} src = '/images/dig252-react-ts/planets/sun_resized.png' alt = 'The Sun - Stationary' width = '60' height = '60' />
                 
-                <img id = 'earth' className = {'earthCenter planetImg ' + playstate  + ' ' + planetMouseOver.earth}  src = '/images/planets/earth_resized.png' alt = 'The Earth - In orbit around the Sun' width = '15' height = '15' />
+                <img id = 'earth' className = {'earthCenter planetImg ' + playstate  + ' ' + planetMouseOver.earth}  src = '/images/dig252-react-ts/planets/earth_resized.png' alt = 'The Earth - In orbit around the Sun' width = '15' height = '15' />
                 
-                <img id = 'mercury' className = {'mercuryCenter planetImg ' + playstate + ' ' + planetMouseOver.mercury} src = '/images/planets/mercury_resized.png' alt = 'Mercury - In orbit around the Sun' width = '5' height = '5' />
+                <img id = 'mercury' className = {'mercuryCenter planetImg ' + playstate + ' ' + planetMouseOver.mercury} src = '/images/dig252-react-ts/planets/mercury_resized.png' alt = 'Mercury - In orbit around the Sun' width = '5' height = '5' />
                 
-                <img id = 'venus' className = {'venusCenter planetImg ' + playstate  + ' ' + planetMouseOver.venus}  src = '/images/planets/venus_resized.png' alt = 'Venus - In orbit around the Sun' width = '14' height = '14' />
+                <img id = 'venus' className = {'venusCenter planetImg ' + playstate  + ' ' + planetMouseOver.venus}  src = '/images/dig252-react-ts/planets/venus_resized.png' alt = 'Venus - In orbit around the Sun' width = '14' height = '14' />
                 
-                <img id = 'mars' className = {'marsCenter planetImg ' + playstate  + ' ' + planetMouseOver.mars} src = '/images/planets/mars_resized.png' alt = 'Mars - In orbit around the Sun' width = '8' height = '8' />
+                <img id = 'mars' className = {'marsCenter planetImg ' + playstate  + ' ' + planetMouseOver.mars} src = '/images/dig252-react-ts/planets/mars_resized.png' alt = 'Mars - In orbit around the Sun' width = '8' height = '8' />
                 
-                <img id = 'jupiter' className = {'jupiterCenter planetImg ' + playstate + ' ' + planetMouseOver.jupiter} src = '/images/planets/jupiter_resized.png' alt = 'Jupiter - In orbit around the Sun' width = '28' height = '28' />
+                <img id = 'jupiter' className = {'jupiterCenter planetImg ' + playstate + ' ' + planetMouseOver.jupiter} src = '/images/dig252-react-ts/planets/jupiter_resized.png' alt = 'Jupiter - In orbit around the Sun' width = '28' height = '28' />
                 
-                <img id = 'saturn' className = {'saturnCenter planetImg ' + playstate + ' ' + planetMouseOver.saturn} src = '/images/planets/saturn_resized.png' alt = 'Saturn - In orbit around the Sun' width = '23' height = '23' />
+                <img id = 'saturn' className = {'saturnCenter planetImg ' + playstate + ' ' + planetMouseOver.saturn} src = '/images/dig252-react-ts/planets/saturn_resized.png' alt = 'Saturn - In orbit around the Sun' width = '23' height = '23' />
                 
-                <img id = 'uranus' className = {'uranusCenter planetImg ' + playstate + ' ' + planetMouseOver.uranus}  src = '/images/planets/uranus_resized.png' alt = 'Uranus - In orbit around the Sun' width = '18' height = '18' />
+                <img id = 'uranus' className = {'uranusCenter planetImg ' + playstate + ' ' + planetMouseOver.uranus}  src = '/images/dig252-react-ts/planets/uranus_resized.png' alt = 'Uranus - In orbit around the Sun' width = '18' height = '18' />
                 
-                <img id = 'neptune' className = {'neptuneCenter planetImg ' + playstate + ' ' + planetMouseOver.neptune} src = '/images/planets/neptune_resized.png' alt = 'Neptune - In orbit around the Sun' width = '16' height = '16' />
+                <img id = 'neptune' className = {'neptuneCenter planetImg ' + playstate + ' ' + planetMouseOver.neptune} src = '/images/dig252-react-ts/planets/neptune_resized.png' alt = 'Neptune - In orbit around the Sun' width = '16' height = '16' />
             
                 <section className = 'contentPanel'>
                     

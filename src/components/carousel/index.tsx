@@ -46,25 +46,25 @@ const Carousel = () => {
                 <div className='showcaseInnerWrapper'>
                     <button className='left'>←</button>  
                     <div id='showcase'>
-                        <img className = 'cloud9-item' src = '/images/planets/sun_resized.png' alt = 'The Sun' width = '260' height = '260' /> 
+                        <img className = 'cloud9-item' src = '/images/dig252-react-ts/planets/sun_resized.png' alt = 'The Sun' width = '260' height = '260' /> 
 
-                        <img className = 'cloud9-item' src = '/images/planets/blank.png' alt = '&nbsp;' width = '200' height = '200' />       
+                        <img className = 'cloud9-item' src = '/images/dig252-react-ts/planets/blank.png' alt = '&nbsp;' width = '200' height = '200' />       
                         
-                        <img className = 'cloud9-item' src = '/images/planets/neptune_resized.png' alt = 'Neptune' width = '200' height = '200' />
+                        <img className = 'cloud9-item' src = '/images/dig252-react-ts/planets/neptune_resized.png' alt = 'Neptune' width = '200' height = '200' />
 
-                        <img className = 'cloud9-item' src = '/images/planets/uranus_resized.png' alt = 'Uranus' width = '200' height = '200' />
+                        <img className = 'cloud9-item' src = '/images/dig252-react-ts/planets/uranus_resized.png' alt = 'Uranus' width = '200' height = '200' />
 
-                        <img className = 'cloud9-item' src = '/images/planets/saturn_resized.png' alt = 'Saturn' width = '352' height = '200' />
+                        <img className = 'cloud9-item' src = '/images/dig252-react-ts/planets/saturn_resized.png' alt = 'Saturn' width = '352' height = '200' />
                     
-                        <img className = 'cloud9-item' src = '/images/planets/jupiter_resized.png' alt = 'Jupiter' width = '200' height = '200' />
+                        <img className = 'cloud9-item' src = '/images/dig252-react-ts/planets/jupiter_resized.png' alt = 'Jupiter' width = '200' height = '200' />
                     
-                        <img className = 'cloud9-item' src = '/images/planets/mars_resized.png' alt = 'Mars' width = '200' height = '200' />
+                        <img className = 'cloud9-item' src = '/images/dig252-react-ts/planets/mars_resized.png' alt = 'Mars' width = '200' height = '200' />
                     
-                        <img className = 'cloud9-item' src = '/images/planets/earth_resized.png' alt = 'Earth' width = '200' height = '200' />
+                        <img className = 'cloud9-item' src = '/images/dig252-react-ts/planets/earth_resized.png' alt = 'Earth' width = '200' height = '200' />
                     
-                        <img className = 'cloud9-item' src = '/images/planets/venus_resized.png' alt = 'Venus' width = '200' height = '200' />
+                        <img className = 'cloud9-item' src = '/images/dig252-react-ts/planets/venus_resized.png' alt = 'Venus' width = '200' height = '200' />
 
-                        <img className = 'cloud9-item' src = '/images/planets/mercury_resized.png' alt = 'Mercury' width = '200' height = '200' />
+                        <img className = 'cloud9-item' src = '/images/dig252-react-ts/planets/mercury_resized.png' alt = 'Mercury' width = '200' height = '200' />
                         
                         <article className = 'introPanel'>
                             You have landed at the Interplanetary Distance Calculator. Select a planet to take off from, then a planet to land at. You will be propelled there instantly, and a distance in Kilometres of your journey will be recorded. Select another planet to take another journey from this location, or select the reset destination to have your flight path calculations start over.
