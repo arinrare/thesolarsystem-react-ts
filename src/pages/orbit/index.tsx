@@ -91,7 +91,7 @@ const Orbit = () => {
     return (
         <>
             <Navmenu />
-            
+             
             <div className = 'header'>
                 <div className = 'title'>Solar Orbit of Planets</div>	
             </div>

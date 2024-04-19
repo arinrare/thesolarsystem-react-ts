@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import Home from './pages/home';
 import {Routes, Route, BrowserRouter} from 'react-router-dom';
@@ -12,6 +12,10 @@ const TrackingID = 'G-FKJK7PJ0VH';
 function App() {
   
   ReactGA.initialize(TrackingID);
+
+  useEffect(() => {
+    document.title = 'The Solar System';
+  }, []);
 
   return (
     <>
