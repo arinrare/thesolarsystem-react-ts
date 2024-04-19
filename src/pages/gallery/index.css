@@ -1,6 +1,8 @@
 .image-gallery {
     margin-top: 100px;
     margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .image-gallery-description {
