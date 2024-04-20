@@ -1,4 +1,4 @@
-# Live website Demo
+# Live Website Demo
 https://michaelbaggott.site/portfolio/dig252-react-ts/
 
 
