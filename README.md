@@ -1,3 +1,6 @@
+NOTE: To run locally remove the basename attribute from the BrowserRouter element in App.tsx
+This is only required when configuring the base URL on a subpage on the web host
+
 # Live Website Demo
 https://michaelbaggott.site/portfolio/dig252-react-ts/
 
