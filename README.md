@@ -1,5 +1,16 @@
-NOTE: To run locally remove the basename attribute from the BrowserRouter element in App.tsx
+## NOTE: 
+
+To run locally remove the basename attribute from the BrowserRouter element in App.tsx
 This is only required when configuring the base URL on a subpage on the web host
+
+Additionally, remove the subfolder paths in the webpack config package.json
+
+"homepage": "https://michaelbaggott.site/portfolio/dig252-react-ts",
+
+becomes": "homepage": "https://michaelbaggott.site/",
+
+When making live, these will need to be adjustaed to match your hosts url, and the subfolders the project goes into
+
 
 # Live Website Demo
 https://michaelbaggott.site/portfolio/dig252-react-ts/
