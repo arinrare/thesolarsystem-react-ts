@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactGA from 'react-ga4';
 import Navmenu from '../../components/navmenu'; 
 import ImageGallery from 'react-image-gallery';
 import Footer from '../../components/footer';
@@ -6,6 +7,10 @@ import './index.css';
 import './image-gallery.scss';
 
 const Gallery = () => {
+    React.useEffect(() => {
+        document.title = "The Solar System - Gallery";
+        ReactGA.send({ hitType: "pageview", page: "/gallery", title: "The Solar System - Gallery Page" });
+    }, []);
     
     const images = [
         {

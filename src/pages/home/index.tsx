@@ -1,10 +1,16 @@
 import React from 'react';
+import ReactGA from 'react-ga4';
 import ImageAccordion from '../../components/imageAccordion';
 import Footer from '../../components/footer';
 import './index.css';
 
 
 const Home = () => {
+    React.useEffect(() => {
+        document.title = "The Solar System - Home";
+        ReactGA.send({ hitType: "pageview", page: "/home", title: "The Solar System - Home Page" });
+    }, []);
+    
     return (
         <>
             <div className='indexTitle'>The Solar System</div>

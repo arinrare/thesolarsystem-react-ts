@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactGA from 'react-ga4';
 import Navmenu from '../../components/navmenu'
 import Footer from '../../components/footer'
 import './index.css'
@@ -16,6 +17,11 @@ const Orbit = () => {
     const [playstate, setPlaystate] = useState('animationPause');
     const [planetMouseOver, setPlanetMouseOver] = useState({ currentState: '', sun: '', mercury: '', venus: '', earth: '', mars: '', jupiter: '', saturn: '', uranus: '', neptune: ''});
 
+    React.useEffect(() => {
+        document.title = "The Solar System - Orbit";
+        ReactGA.send({ hitType: "pageview", page: "/orbit", title: "The Solar System - Orbit Page" });
+    }, []);
+    
     function handlePlayClick() {
         setPlaystate((prevState) => {
             return prevState === 'animationPause' ? 'animationPlay' : 'animationPause';
