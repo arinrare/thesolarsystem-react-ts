@@ -9,7 +9,7 @@ import './image-gallery.scss';
 const Gallery = () => {
     React.useEffect(() => {
         document.title = "The Solar System - Gallery";
-        ReactGA.send({ hitType: "pageview", page: "/gallery", title: "The Solar System - Gallery Page" });
+        ReactGA.send({ hitType: "pageview", page: "/thesolarsystem/gallery", title: "The Solar System - Gallery Page" });
     }, []);
     
     const images = [

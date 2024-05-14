@@ -19,7 +19,7 @@ const Orbit = () => {
 
     React.useEffect(() => {
         document.title = "The Solar System - Orbit";
-        ReactGA.send({ hitType: "pageview", page: "/orbit", title: "The Solar System - Orbit Page" });
+        ReactGA.send({ hitType: "pageview", page: "/thesolarsystem/orbit", title: "The Solar System - Orbit Page" });
     }, []);
     
     function handlePlayClick() {

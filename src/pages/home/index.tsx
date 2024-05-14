@@ -8,7 +8,7 @@ import './index.css';
 const Home = () => {
     React.useEffect(() => {
         document.title = "The Solar System - Home";
-        ReactGA.send({ hitType: "pageview", page: "/home", title: "The Solar System - Home Page" });
+        ReactGA.send({ hitType: "pageview", page: "/thesolarsystem/home", title: "The Solar System - Home Page" });
     }, []);
     
     return (

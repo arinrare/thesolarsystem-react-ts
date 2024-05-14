@@ -8,7 +8,7 @@ import Footer from '../../components/footer';
 const SolarSystem = () => {
     React.useEffect(() => {
         document.title = "The Solar System - Distance Calculator";
-        ReactGA.send({ hitType: "pageview", page: "/distancecalculator", title: "The Solar System - Distance Calculator Page" });
+        ReactGA.send({ hitType: "pageview", page: "/thesolarsystem/distancecalculator", title: "The Solar System - Distance Calculator Page" });
     }, []);
 
     return (
